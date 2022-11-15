@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "cross-env DEBUG='myapp:*' node ./bin/www.js",
-    "migrate": "prisma migrate deploy",
-    "postinstall": "prisma migrate deploy && prisma generate"
+    "prestart": "prisma migrate deploy",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^4.6.1",
